@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Becas PUCE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Enlace de salto para navegación rápida por teclado -->
+  <a href="#contenido-principal" class="skip-link">Ir al contenido principal</a>
+
+  <!-- <header>: Logo PUCE + Título -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-box" role="img" aria-label="Logotipo PUCE">
+        <span class="logo-mark" aria-hidden="true">PUCE</span>
+      </div>
+      <h1 class="site-title">PORTAL DE BECAS</h1>
+    </div>
+  </header>
+
+  <!-- <nav>: 4 categorías del boceto -->
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list">
+      <li><a href="#becas" class="nav-link">Becas</a></li>
+      <li><a href="#postular" class="nav-link">Postular</a></li>
+      <li><a href="#becas" class="nav-link">Mi beca</a></li>
+      <li><a href="#ayuda" class="nav-link">Ayuda</a></li>
+    </ul>
+  </nav>
+
+  <!-- <main>: Contenido principal -->
+  <main id="contenido-principal" class="main-content">
+
+    <!-- Botón de acción principal superior del boceto -->
+    <div class="cta-top">
+      <a href="#postular" class="btn-primary">POSTULAR AHORA</a>
+    </div>
+
+    <!-- <section> + <article>: Tarjeta de beca -->
+    <section id="becas" class="becas-section" aria-labelledby="titulo-becas">
+      <h2 id="titulo-becas" class="sr-only">Becas Disponibles</h2>
+
+      <article class="beca-card">
+        <span class="beca-badge">Mérito y Vulnerabilidad</span>
+        <h3 class="beca-title">Beca Socioeconómica</h3>
+        <p class="beca-desc">
+          Apoyo económico dirigido a estudiantes de grado para obtener un descuento en la factura de su matrícula.
+        </p>
+        <a href="#postular" class="btn-secondary">Postular a esta Beca</a>
+      </article>
+    </section>
+
+    <!-- <section id="postular">: Formulario de solicitud -->
+    <section id="postular" class="postular-section" aria-labelledby="titulo-postular">
+      <h2 id="titulo-postular" class="section-title">Solicitud de Beca</h2>
+
+      <form action="#postular" method="post" class="beca-form">
+        <div class="form-group">
+          <label for="nombre">Nombre Completo:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ej. Juan Fernando Ochoa"
+            required
+            aria-required="true"
+            autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="carrera">Carrera:</label>
+          <input
+            type="text"
+            id="carrera"
+            name="carrera"
+            placeholder="Ej. Medicina"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="documentos">Documentos:</label>
+          <input
+            type="file"
+            id="documentos"
+            name="documentos"
+            accept=".pdf,application/pdf"
+            required
+            aria-required="true"
+            aria-describedby="ayuda-pdf">
+          <small id="ayuda-pdf" class="help-text">Subir documento (PDF, Máx. 5MB)</small>
+        </div>
+
+        <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- <footer>: Contacto Bienestar Estudiantil -->
+  <footer id="ayuda" class="site-footer">
+    <p>PUCE TEC - Bienestar Estudiantil</p>
+  </footer>
+
+</body>
+</html>
